@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMS_project.Models.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Library Management</title>
+  
+</head>
+  <link rel="stylesheet" href="Style.css">
+<body>
+    <form id="form2" runat="server">
+         <div class="navbar">
+            <a href="Home.aspx" class="<%= SetActiveClass("Home.aspx") %>">Dashboard</a>
+            <a href="ManageBooks.aspx" class="<%= SetActiveClass("ManageBooks.aspx") %>">Manage Books</a>
+            <a href="ManageUsers.aspx" class="<%= SetActiveClass("ManageUsers.aspx") %>">Manage Users</a>
+            <a href="IssueBooks.aspx" class="<%= SetActiveClass("IssueBooks.aspx") %>">Issue Books</a>
+            <a href="ReturnBooks.aspx" class="<%= SetActiveClass("ReturnBooks.aspx") %>">Return Books</a>
+            <a href="Reports.aspx" class="<%= SetActiveClass("Reports.aspx") %>">Reports</a>
+             <a href="Reg.aspx" id="logout" class="<%= SetActiveClass("Reg.aspx") %>">Logout</a>&nbsp;
+
+         </div>
+      
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+  
+  
+</body>
+</html>
